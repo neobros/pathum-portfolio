@@ -87,3 +87,14 @@ Two things were cleaned up from the source CV, worth a look:
 The four stat tiles in the About section ("20+ production services",
 "11 Laravel versions shipped") are illustrative — they aren't in the CV. Adjust
 the `stats` array to real numbers or remove any you don't want to claim.
+
+## Assets
+
+| File | Use |
+|---|---|
+| `public/favicon.svg` | PT monogram on the brand gradient — the site icon |
+| `public/assets/pathum.webp` | transparent standing cut-out, hero |
+| `public/assets/pathum-profile.webp` | square headshot, About section + link previews |
+
+Both photos are WebP. Paths are set in `src/data/content.js` (`profile.photo`
+and `profile.avatar`); the favicon is referenced from `index.html`.

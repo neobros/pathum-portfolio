@@ -58,17 +58,38 @@ export default function About() {
             </RevealGroup>
           </div>
 
-          <RevealGroup className="stats" stagger={0.1}>
-            {stats.map((s) => (
-              <motion.div className="stat" key={s.label} variants={revealChild}>
-                <div className="stat__num grad-text">
-                  <Counter to={s.value} />
-                  {s.suffix}
-                </div>
-                <div className="stat__label">{s.label}</div>
-              </motion.div>
-            ))}
-          </RevealGroup>
+          <div className="about__side">
+            {/* Vertical reveal only: an x-offset on a full-width element sits
+                outside the viewport until it scrolls in, widening the page. */}
+            <Reveal from="up" duration={0.9}>
+              <figure className="avatar">
+                <img
+                  className="avatar__img"
+                  src={profile.avatar}
+                  alt={profile.name}
+                  width={760}
+                  height={760}
+                  loading="lazy"
+                />
+                <figcaption className="avatar__tag">
+                  <span className="avatar__dot" />
+                  {profile.role}
+                </figcaption>
+              </figure>
+            </Reveal>
+
+            <RevealGroup className="stats" stagger={0.1}>
+              {stats.map((s) => (
+                <motion.div className="stat" key={s.label} variants={revealChild}>
+                  <div className="stat__num grad-text">
+                    <Counter to={s.value} />
+                    {s.suffix}
+                  </div>
+                  <div className="stat__label">{s.label}</div>
+                </motion.div>
+              ))}
+            </RevealGroup>
+          </div>
         </div>
       </div>
     </section>

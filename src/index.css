@@ -1384,6 +1384,80 @@ button {
   color: var(--muted);
 }
 
+.about__side {
+  display: grid;
+  gap: 18px;
+}
+
+/* Framed headshot. The source has its own blue studio backdrop, so it sits in
+   a rounded frame with a gradient hairline rather than floating like the
+   transparent hero cut-out. */
+.avatar {
+  position: relative;
+  margin: 0;
+  border-radius: 20px;
+  padding: 1px;
+  background: linear-gradient(140deg, rgba(139, 92, 246, 0.7), rgba(34, 211, 238, 0.45) 45%, rgba(255, 255, 255, 0.06) 75%);
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.avatar::after {
+  /* deepens the bottom so the caption stays readable over the photo */
+  content: '';
+  position: absolute;
+  inset: auto 0 0 0;
+  height: 42%;
+  background: linear-gradient(to top, rgba(5, 6, 10, 0.92), transparent);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.avatar__img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: 19px;
+  filter: saturate(1.03) contrast(1.02);
+  transition: transform 0.9s var(--ease);
+}
+
+.avatar:hover .avatar__img {
+  transform: scale(1.045);
+}
+
+.avatar__tag {
+  position: absolute;
+  left: 16px;
+  bottom: 14px;
+  z-index: 2;
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  padding: 8px 15px;
+  border-radius: 99px;
+  border: 1px solid var(--line-strong);
+  background: rgba(10, 12, 20, 0.72);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  font-family: var(--mono);
+  font-size: 0.71rem;
+  color: var(--text);
+  letter-spacing: 0.02em;
+}
+
+.avatar__dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--emerald);
+  box-shadow: 0 0 0 0 rgba(52, 211, 153, 0.65);
+  animation: pulse-dot 2.2s infinite;
+  flex: none;
+}
+
 .stats {
   display: grid;
   grid-template-columns: repeat(2, 1fr);

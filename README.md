@@ -77,18 +77,31 @@ Because the cut-out is a tall standing figure, `.hero__photo-wrap` is sized by
 
 ## Notes on the CV content
 
-Two things were cleaned up from the source CV, worth a look:
+Built from **CV_Pathum Thennakoon.pdf** (the 5+ years version). What changed from
+the earlier draft, in case you compare them:
 
-1. **"Payment Notification & Payout System" was listed twice**, identically. The
-   duplicate was dropped, leaving four projects.
-2. **"Inventory & Order Management System" had the payout project's bullets
-   copy-pasted into it** (batch payouts, multi-level approvals). Those were
-   replaced with inventory/order bullets that match the project title — please
-   review and correct them in `src/data/content.js`.
+- Title is now **Software Engineer**, not "Backend Software Engineer" — the
+  profile leads with full-stack and *focuses* on backend. That string drives the
+  page title, OG tags, the manifest and the About pill, so it is set once in
+  `profile.role`.
+- **4 years -> 5+ years**, reflected in the stats, hero copy and section headings.
+- **Payment Notification & Payout System is gone** — it is not in this CV. The
+  earlier duplicate-listing problem no longer applies.
+- **Inventory & Order Management System now has its own real bullets**, replacing
+  the placeholder text I had written when the old CV pasted the payout bullets
+  into it. Nothing invented remains in the projects.
+- **New project: Construction Workforce & Job Management Platform (UK)** —
+  multi-tenant, .NET + React, Socket.IO chat, AI chatbot, SMTP. It carries a
+  `region` field that renders as the "UK" tag on the card.
+- **New tech surfaced across the site**: .NET, Python, PostgreSQL, AWS, CI/CD,
+  MetaMask. The hero orbit, marquee and preloader boot log were re-picked to
+  match, so the icons reflect the stack actually listed in the CV.
+- **Address dropped to just "Sri Lanka"** — that is all this CV gives. The old
+  full street address is no longer shown anywhere.
 
-The four stat tiles in the About section ("20+ production services",
-"11 Laravel versions shipped") are illustrative — they aren't in the CV. Adjust
-the `stats` array to real numbers or remove any you don't want to claim.
+The four stat tiles are now derived from the CV rather than invented: 5+ years,
+4 employers, 4 projects listed, and 15+ distinct technologies counted across the
+per-role technology stacks.
 
 ## Assets
 

@@ -11,8 +11,8 @@ export default function About() {
       <div className="shell">
         <SectionHeading
           eyebrow="About"
-          title="Backend first, always."
-          copy="Four years of shipping the parts nobody sees — the ones that decide whether the product stays up."
+          title="Backend first, full-stack throughout."
+          copy="Five years of shipping the parts nobody sees — the ones that decide whether the product stays up."
         />
 
         <div className="about__grid">

@@ -14,6 +14,7 @@ export const profile = {
   linkedin: 'http://www.linkedin.com/in/pathum-thennakoon',
   photo: '/assets/pathum.webp',
   avatar: '/assets/pathum-profile.webp',
+  mark: '/assets/pathum-avatar.webp',
 }
 
 export const stats = [

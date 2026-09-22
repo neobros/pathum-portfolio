@@ -53,7 +53,9 @@ export default function Navbar() {
         transition={{ duration: 0.9, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
       >
         <a href="#home" className="nav__brand">
-          <span className="nav__mark">PT</span>
+          <span className="nav__mark">
+            <img src={profile.mark} alt="" width={128} height={128} />
+          </span>
           <span>{profile.name}</span>
         </a>
 

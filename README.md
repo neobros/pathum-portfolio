@@ -97,6 +97,7 @@ the `stats` array to real numbers or remove any you don't want to claim.
 | `public/favicon.svg` | PT monogram on the brand gradient — the site icon |
 | `public/assets/pathum.webp` | transparent standing cut-out, hero |
 | `public/assets/pathum-profile.webp` | square headshot, About section + link previews |
+| `public/assets/pathum-avatar.webp` | 128px face crop, circular navbar avatar |
 
-Both photos are WebP. Paths are set in `src/data/content.js` (`profile.photo`
-and `profile.avatar`); the favicon is referenced from `index.html`.
+All three photos are WebP. Paths are set in `src/data/content.js` (`profile.photo`,
+`profile.avatar` and `profile.mark`); the favicon is referenced from `index.html`.

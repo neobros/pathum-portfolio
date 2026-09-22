@@ -394,40 +394,138 @@ button {
   background: #05060a;
 }
 
-.preloader__inner {
-  text-align: center;
-  width: min(420px, 80vw);
-}
-
-.preloader__name {
-  font-family: var(--mono);
-  font-size: 0.78rem;
-  letter-spacing: 0.4em;
-  text-transform: uppercase;
-  color: var(--muted);
-  margin-bottom: 22px;
-}
-
-.preloader__count {
-  font-size: clamp(3rem, 12vw, 6rem);
-  font-weight: 800;
-  letter-spacing: -0.05em;
-  line-height: 1;
-}
-
-.preloader__bar {
-  margin-top: 26px;
-  height: 2px;
-  width: 100%;
-  background: rgba(255, 255, 255, 0.1);
+/* Terminal-style boot log */
+.boot {
+  width: min(480px, calc(100vw - 40px));
+  border-radius: 14px;
+  border: 1px solid var(--line);
+  background: rgba(10, 12, 20, 0.92);
+  box-shadow: 0 40px 90px -40px rgba(0, 0, 0, 1);
   overflow: hidden;
-  border-radius: 99px;
+  font-family: var(--mono);
 }
 
-.preloader__fill {
+.boot__bar {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 11px 14px;
+  border-bottom: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.025);
+}
+
+.boot__bar i {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.16);
+  flex: none;
+}
+.boot__bar i:first-child {
+  background: rgba(248, 113, 113, 0.7);
+}
+.boot__bar i:nth-child(2) {
+  background: rgba(251, 191, 36, 0.7);
+}
+.boot__bar i:nth-child(3) {
+  background: rgba(52, 211, 153, 0.7);
+}
+
+.boot__bar span {
+  margin-left: 10px;
+  font-size: 0.68rem;
+  color: var(--dim);
+  letter-spacing: 0.04em;
+}
+
+.boot__body {
+  padding: 16px 18px 18px;
+  font-size: 0.76rem;
+  line-height: 1.5;
+}
+
+.boot__line {
+  display: flex;
+  align-items: baseline;
+  gap: 9px;
+  padding: 3px 0;
+  white-space: nowrap;
+}
+
+.boot__prompt {
+  color: var(--emerald);
+}
+
+.boot__cmd {
+  color: var(--text);
+}
+
+.boot__ok {
+  color: var(--emerald);
+  width: 10px;
+  flex: none;
+}
+
+.boot__pending {
+  color: var(--amber);
+  width: 10px;
+  flex: none;
+  font-size: 0.6rem;
+}
+
+.boot__name {
+  color: var(--cyan);
+  min-width: 82px;
+}
+
+.boot__tag {
+  color: var(--dim);
+  min-width: 34px;
+}
+
+.boot__status {
+  color: var(--muted);
+}
+
+.boot__line--final {
+  margin-top: 10px;
+  padding-top: 12px;
+  border-top: 1px solid var(--line);
+  font-weight: 600;
+}
+
+.boot__arrow {
+  color: var(--violet);
+}
+
+.boot__caret {
+  display: inline-block;
+  width: 7px;
+  height: 13px;
+  background: var(--cyan);
+  transform: translateY(2px);
+}
+
+.boot__progress {
+  height: 2px;
+  background: rgba(255, 255, 255, 0.07);
+}
+
+.boot__progress i {
+  display: block;
   height: 100%;
   background: var(--grad);
   transform-origin: left;
+  transform: scaleX(0);
+}
+
+@media (max-width: 480px) {
+  .boot__body {
+    font-size: 0.68rem;
+  }
+  .boot__name {
+    min-width: 68px;
+  }
 }
 
 /* ============================================================

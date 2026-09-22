@@ -94,10 +94,12 @@ the `stats` array to real numbers or remove any you don't want to claim.
 
 | File | Use |
 |---|---|
-| `public/favicon.svg` | PT monogram on the brand gradient — the site icon |
+| `public/favicon.svg` | circular headshot in a gradient ring (photo embedded as base64 WebP) — the site icon |
 | `public/assets/pathum.webp` | transparent standing cut-out, hero |
-| `public/assets/pathum-profile.webp` | square headshot, About section + link previews |
-| `public/assets/pathum-avatar.webp` | 128px face crop, circular navbar avatar |
+| `public/assets/pathum-profile.webp` | 512px circular cut-out, About portrait |
+| `public/assets/pathum-avatar.webp` | 128px circular cut-out, navbar + footer mark |
+| `public/icon-*.webp`, `apple-touch-icon.png` | PWA / iOS icons, generated from the same photo |
+| `public/site.webmanifest` | installable-app metadata |
 
 All three photos are WebP. Paths are set in `src/data/content.js` (`profile.photo`,
 `profile.avatar` and `profile.mark`); the favicon is referenced from `index.html`.

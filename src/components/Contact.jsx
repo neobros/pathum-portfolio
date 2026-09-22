@@ -1,6 +1,7 @@
 import { FiArrowUp, FiMail, FiPhone } from 'react-icons/fi'
 import { FaLinkedinIn } from 'react-icons/fa'
 import Reveal, { SplitText } from './Reveal.jsx'
+import Logo from './Logo.jsx'
 import { profile } from '../data/content.js'
 
 export default function Contact() {
@@ -50,9 +51,12 @@ export default function Contact() {
 
       <footer>
         <div className="shell footer">
-          <span>
-            © {new Date().getFullYear()} {profile.name} · {profile.role}
-          </span>
+          <a className="footer__brand" href="#home" aria-label="Back to top">
+            <Logo size={30} />
+            <span>
+              © {new Date().getFullYear()} {profile.name} · {profile.role}
+            </span>
+          </a>
           <a className="footer__top" href="#home">
             Back to top <FiArrowUp size={14} />
           </a>

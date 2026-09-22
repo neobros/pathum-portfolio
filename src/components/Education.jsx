@@ -43,7 +43,7 @@ export default function Education() {
         </div>
 
         {/* ---------------- references ---------------- */}
-        <div style={{ marginTop: 'clamp(56px, 8vw, 96px)' }}>
+        <div style={{ marginTop: 'clamp(42px, 6vw, 68px)' }}>
           <Reveal>
             <span className="eyebrow">References</span>
           </Reveal>

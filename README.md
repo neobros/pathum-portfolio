@@ -18,7 +18,8 @@ already taken on this machine).
 ## Where things live
 
 ```
-public/assets/pathum.webp    the cut-out portrait used in the hero
+public/favicon.svg           PT monogram site icon
+public/assets/                the two photos (see Assets below)
 src/data/content.js          ALL copy: profile, skills, jobs, projects, education, refs
 src/index.css                design tokens + every @keyframes
 src/components/              one file per section
@@ -38,9 +39,9 @@ gradient text, buttons, orbit glow, scrollbar, timeline rail — follows.
 
 | Where | What happens |
 |---|---|
-| Page load | Preloader counts 000→100, then slides up off screen |
+| Page load | Terminal boot log — laravel / node / mysql / redis / socket.io / api resolve one per tick from a pulsing dot to a green check, then the whole panel slides up off screen |
 | Cursor | White dot tracks instantly, ring lags on a spring and swells over anything clickable (desktop only) |
-| Background | Drifting grid, three blurred colour orbs on slow loops, film grain |
+| Background | Three blurred colour orbs on slow loops, plus film grain |
 | Nav | Drops in on load; the active pill slides between items via `layoutId`; blurs into glass once you scroll |
 | Hero name | "Pathum" / "Thennakoon" rise out of a clipping mask, surname in gradient |
 | Hero role | Typewriter cycling four titles |
@@ -50,6 +51,7 @@ gradient text, buttons, orbit glow, scrollbar, timeline rail — follows.
 | Marquee | Infinite tech strip, pauses on hover |
 | Section headings | Word-by-word rise from a mask |
 | Cards | Stagger in with a blur-to-sharp reveal; lift on hover; a highlight follows the cursor across the surface |
+| Headshot | Framed in a gradient hairline; slow zoom on hover, role pill with a live dot |
 | Stats | Count up from zero when scrolled into view |
 | Timeline | Gradient rail fills as you scroll; "Current" node pulses |
 | Scroll | Gradient progress bar pinned to the top of the viewport |

@@ -140,23 +140,6 @@ button {
   overflow: hidden;
 }
 
-.bg-grid {
-  position: absolute;
-  inset: -50%;
-  background-image: linear-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
-  background-size: 64px 64px;
-  mask-image: radial-gradient(ellipse 70% 60% at 50% 40%, #000 20%, transparent 78%);
-  -webkit-mask-image: radial-gradient(ellipse 70% 60% at 50% 40%, #000 20%, transparent 78%);
-  animation: grid-drift 32s linear infinite;
-}
-
-@keyframes grid-drift {
-  to {
-    transform: translate3d(64px, 64px, 0);
-  }
-}
-
 .orb {
   position: absolute;
   border-radius: 50%;

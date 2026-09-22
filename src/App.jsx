@@ -42,7 +42,6 @@ export default function App() {
 
       {/* ambient background sits behind everything */}
       <div className="bg-layer">
-        <div className="bg-grid" />
         <div className="orb orb--1" />
         <div className="orb orb--2" />
         <div className="orb orb--3" />

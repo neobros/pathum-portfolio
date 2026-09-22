@@ -1,0 +1,16 @@
+{
+  "name": "Pathum Thennakoon — Software Engineer",
+  "short_name": "Pathum T.",
+  "description": "Software Engineer with 5+ years building scalable, high-performance applications across Node.js, NestJS, React, Laravel and .NET.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#05060a",
+  "theme_color": "#05060a",
+  "icons": [
+    { "src": "/favicon.svg", "type": "image/svg+xml", "sizes": "any", "purpose": "any" },
+    { "src": "/icon-192.webp", "type": "image/webp", "sizes": "192x192", "purpose": "any" },
+    { "src": "/icon-512.webp", "type": "image/webp", "sizes": "512x512", "purpose": "any" },
+    { "src": "/icon-maskable-512.webp", "type": "image/webp", "sizes": "512x512", "purpose": "maskable" }
+  ]
+}

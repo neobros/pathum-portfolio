@@ -5,36 +5,36 @@ import { FaLinkedinIn } from 'react-icons/fa'
 import {
   SiLaravel,
   SiNodedotjs,
-  SiPhp,
+  SiDotnet,
   SiReact,
-  SiMysql,
+  SiPostgresql,
   SiRedis,
   SiDocker,
   SiMongodb,
   SiTypescript,
-  SiNginx,
-  SiPostgresql,
+  SiPython,
+  SiNestjs,
   SiSocketdotio,
 } from 'react-icons/si'
 import { profile } from '../data/content.js'
 
 /* Icons that ride the outer orbit ring */
 const OUTER = [
-  { Icon: SiLaravel, color: '#f05340', label: 'Laravel' },
   { Icon: SiNodedotjs, color: '#5fa04e', label: 'Node.js' },
-  { Icon: SiPhp, color: '#8892bf', label: 'PHP' },
+  { Icon: SiDotnet, color: '#8c4ee8', label: '.NET' },
   { Icon: SiReact, color: '#61dafb', label: 'React' },
-  { Icon: SiMysql, color: '#4479a1', label: 'MySQL' },
+  { Icon: SiPostgresql, color: '#4169e1', label: 'PostgreSQL' },
+  { Icon: SiLaravel, color: '#f05340', label: 'Laravel' },
+  { Icon: SiTypescript, color: '#3178c6', label: 'TypeScript' },
   { Icon: SiDocker, color: '#2496ed', label: 'Docker' },
   { Icon: SiRedis, color: '#ff4438', label: 'Redis' },
-  { Icon: SiTypescript, color: '#3178c6', label: 'TypeScript' },
 ]
 
 /* Icons on the tighter, counter-rotating inner ring */
 const INNER = [
+  { Icon: SiNestjs, color: '#e0234e', label: 'NestJS' },
+  { Icon: SiPython, color: '#ffd845', label: 'Python' },
   { Icon: SiMongodb, color: '#47a248', label: 'MongoDB' },
-  { Icon: SiNginx, color: '#009639', label: 'Nginx' },
-  { Icon: SiPostgresql, color: '#4169e1', label: 'PostgreSQL' },
   { Icon: SiSocketdotio, color: '#e9ecf5', label: 'Socket.IO' },
 ]
 
@@ -105,7 +105,7 @@ export default function Hero() {
             transition={{ duration: 0.7, delay: 0.35, ease: [0.22, 1, 0.36, 1] }}
           >
             <span className="hero__dot" />
-            Available for backend work
+            Available for new roles
           </motion.span>
 
           <h1 className="hero__title">
@@ -136,10 +136,10 @@ export default function Hero() {
           >
             <Typewriter
               words={[
-                'Backend Software Engineer',
-                'Laravel & Node.js Specialist',
-                'Microservices Architect',
-                'Real-time Systems Builder',
+                'Software Engineer',
+                'Backend & Full-stack Developer',
+                'REST API & Microservices Builder',
+                'Real-time Systems Engineer',
               ]}
             />
           </motion.div>
@@ -150,8 +150,8 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.9, ease: [0.22, 1, 0.36, 1] }}
           >
-            Around 4 years designing scalable APIs, microservices and secure financial
-            transaction platforms that hold up under real production load.
+            5+ years building scalable, high-performance applications — REST APIs,
+            real-time systems and payment platforms that hold up under real production load.
           </motion.p>
 
           <motion.div
@@ -292,7 +292,7 @@ export default function Hero() {
             <span className="c">// api/routes.php</span>
             {'\n'}
             <span className="k">Route</span>::<span className="f">apiResource</span>(
-            <span className="s">'payouts'</span>);
+            <span className="s">'jobs'</span>);
           </motion.div>
 
           <motion.div
@@ -320,7 +320,7 @@ export default function Hero() {
           >
             <span className="c">$</span> docker compose up <span className="n">-d</span>
             {'\n'}
-            <span className="s">✔</span> <span className="c">api · redis · mysql ready</span>
+            <span className="s">✔</span> <span className="c">api · redis · postgres ready</span>
           </motion.div>
         </div>
       </div>

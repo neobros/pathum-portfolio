@@ -13,7 +13,7 @@ export default function Projects() {
         <SectionHeading
           eyebrow="Selected work"
           title="Systems built to take a beating."
-          copy="Wallets, exams, payouts and stock — the backends behind platforms people use daily."
+          copy="Wallets, exams, construction crews and stock — the platforms behind businesses that run on them daily."
         />
 
         <RevealGroup className="projects__grid" stagger={0.1}>
@@ -28,7 +28,10 @@ export default function Projects() {
             >
               <span className="pcard__glow" />
 
-              <span className="pcard__index">{project.index}</span>
+              <div className="pcard__top">
+                <span className="pcard__index">{project.index}</span>
+                {project.region && <span className="pcard__region">{project.region}</span>}
+              </div>
               <h3 className="pcard__title">{project.title}</h3>
               <p className="pcard__blurb">{project.blurb}</p>
 

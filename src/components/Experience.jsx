@@ -21,7 +21,7 @@ export default function Experience() {
       <div className="shell">
         <SectionHeading
           eyebrow="Experience"
-          title="Four years, four teams."
+          title="Five years, four teams."
           copy="From associate to owning backend architecture — each step added load, money or both."
         />
 

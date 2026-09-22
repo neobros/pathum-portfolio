@@ -3,12 +3,12 @@ import { motion } from 'framer-motion'
 
 /* Reads like a backend boot log — one service resolves per tick. */
 const SERVICES = [
-  { name: 'laravel', tag: '11.x', status: 'booted' },
   { name: 'node', tag: '20.x', status: 'booted' },
-  { name: 'mysql', tag: '8.0', status: 'connected' },
+  { name: 'dotnet', tag: '8.0', status: 'booted' },
+  { name: 'laravel', tag: '11.x', status: 'booted' },
+  { name: 'postgres', tag: '16', status: 'connected' },
   { name: 'redis', tag: '7.2', status: 'connected' },
   { name: 'socket.io', tag: '4.x', status: 'listening' },
-  { name: 'api', tag: 'v1', status: 'ready' },
 ]
 
 const TICK = 250
@@ -89,7 +89,7 @@ export default function Preloader({ onDone }) {
           >
             <span className="boot__arrow">→</span>
             <span className="grad-text">Pathum Thennakoon</span>
-            <span className="boot__status">backend engineer</span>
+            <span className="boot__status">software engineer</span>
             <motion.span
               className="boot__caret"
               animate={{ opacity: [1, 1, 0, 0] }}

@@ -61,10 +61,12 @@ export default function Hero() {
   const sx = useSpring(mx, { stiffness: 120, damping: 20, mass: 0.6 })
   const sy = useSpring(my, { stiffness: 120, damping: 20, mass: 0.6 })
 
-  const photoX = useTransform(sx, [-0.5, 0.5], [-26, 26])
-  const photoY = useTransform(sy, [-0.5, 0.5], [-18, 18])
-  const rotY = useTransform(sx, [-0.5, 0.5], [10, -10])
-  const rotX = useTransform(sy, [-0.5, 0.5], [-8, 8])
+  // Vertical travel is deliberately small — it stacks with the `bob` keyframe,
+  // and together they must not lift the top of his head into the navbar.
+  const photoX = useTransform(sx, [-0.5, 0.5], [-16, 16])
+  const photoY = useTransform(sy, [-0.5, 0.5], [-9, 9])
+  const rotY = useTransform(sx, [-0.5, 0.5], [7, -7])
+  const rotX = useTransform(sy, [-0.5, 0.5], [-4, 4])
   const ringsX = useTransform(sx, [-0.5, 0.5], [16, -16])
   const ringsY = useTransform(sy, [-0.5, 0.5], [12, -12])
 

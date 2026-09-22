@@ -638,7 +638,8 @@ button {
   min-height: 100svh;
   display: flex;
   align-items: center;
-  padding-top: 120px;
+  /* Clears the fixed navbar plus the portrait's animation overshoot. */
+  padding-top: 132px;
   padding-bottom: 80px;
   overflow: hidden;
 }
@@ -891,7 +892,9 @@ button {
 .hero__photo-wrap {
   position: relative;
   z-index: 3;
-  height: min(74vh, 620px);
+  /* 68vh rather than 74vh so the figure still fits under the navbar on short
+     laptop viewports (~700px tall) once the bob and tilt are applied. */
+  height: min(68vh, 620px);
   max-width: 100%;
   will-change: transform;
 }
@@ -915,13 +918,15 @@ button {
   );
 }
 
+/* Kept shallow on purpose: combined with the mouse tilt/parallax in Hero.jsx,
+   a taller travel pushes the top of his head into the navbar on short laptops. */
 @keyframes bob {
   0%,
   100% {
     transform: translateY(0);
   }
   50% {
-    transform: translateY(-16px);
+    transform: translateY(-8px);
   }
 }
 

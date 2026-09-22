@@ -888,13 +888,25 @@ button {
 }
 
 /* The cut-out is a tall standing figure (578x1371), so it is sized by HEIGHT —
-   driving it off width would overflow the section vertically. */
-.hero__photo-wrap {
+   driving it off width would overflow the section vertically.
+   The idle bob MUST live here, on an ancestor of .hero__photo-wrap, because
+   that wrap keeps a `clip-path: inset(0)` from its entrance reveal. A parent's
+   clip-path is a fixed box in the parent's own space, so bobbing the image
+   INSIDE the wrap would slide it out of that box and shave off his hair. */
+.hero__photo-bob {
   position: relative;
   z-index: 3;
   /* 68vh rather than 74vh so the figure still fits under the navbar on short
      laptop viewports (~700px tall) once the bob and tilt are applied. */
   height: min(68vh, 620px);
+  max-width: 100%;
+  animation: bob 6.5s ease-in-out infinite;
+  will-change: transform;
+}
+
+.hero__photo-wrap {
+  position: relative;
+  height: 100%;
   max-width: 100%;
   will-change: transform;
 }
@@ -906,7 +918,6 @@ button {
   object-fit: contain;
   filter: drop-shadow(0 34px 60px rgba(0, 0, 0, 0.75))
     drop-shadow(0 0 40px rgba(139, 92, 246, 0.22));
-  animation: bob 6.5s ease-in-out infinite;
   /* The figure runs to the bottom edge of the source frame, so only the last
      sliver is faded — just enough to kill the hard cut at his legs. */
   mask-image: linear-gradient(to bottom, #000 90%, rgba(0, 0, 0, 0.45) 97%, transparent 100%);
@@ -1135,7 +1146,7 @@ button {
     order: -1;
     min-height: 420px;
   }
-  .hero__photo-wrap {
+  .hero__photo-bob {
     height: min(48vh, 400px);
   }
   .orbit {

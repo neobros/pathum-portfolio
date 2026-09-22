@@ -252,29 +252,32 @@ export default function Hero() {
             </div>
           </motion.div>
 
-          {/* portrait */}
-          <motion.div
-            className="hero__photo-wrap"
-            style={{
-              x: photoX,
-              y: photoY,
-              rotateX: rotX,
-              rotateY: rotY,
-              transformStyle: 'preserve-3d',
-            }}
-            initial={{ opacity: 0, scale: 0.88, clipPath: 'inset(100% 0 0 0)' }}
-            animate={{ opacity: 1, scale: 1, clipPath: 'inset(0% 0 0 0)' }}
-            transition={{ duration: 1.35, delay: 0.5, ease: [0.22, 1, 0.36, 1] }}
-          >
-            <img
-              className="hero__photo"
-              src={profile.photo}
-              alt={`${profile.name}, backend software engineer`}
-              width={578}
-              height={1371}
-            />
-            <div className="hero__scan" />
-          </motion.div>
+          {/* portrait — the idle bob is on the outer element so the reveal's
+              clip-path travels with the image instead of cropping his hair */}
+          <div className="hero__photo-bob">
+            <motion.div
+              className="hero__photo-wrap"
+              style={{
+                x: photoX,
+                y: photoY,
+                rotateX: rotX,
+                rotateY: rotY,
+                transformStyle: 'preserve-3d',
+              }}
+              initial={{ opacity: 0, scale: 0.88, clipPath: 'inset(100% 0 0 0)' }}
+              animate={{ opacity: 1, scale: 1, clipPath: 'inset(0% 0 0 0)' }}
+              transition={{ duration: 1.35, delay: 0.5, ease: [0.22, 1, 0.36, 1] }}
+            >
+              <img
+                className="hero__photo"
+                src={profile.photo}
+                alt={`${profile.name}, backend software engineer`}
+                width={578}
+                height={1371}
+              />
+              <div className="hero__scan" />
+            </motion.div>
+          </div>
 
           {/* floating code cards */}
           <motion.div

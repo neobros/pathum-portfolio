@@ -12,7 +12,7 @@ export const profile = {
   email: 'pathumthennakoon6@gmail.com',
   phone: '+94 70-221 1819',
   linkedin: 'http://www.linkedin.com/in/pathum-thennakoon',
-  photo: '/assets/pathum.png',
+  photo: '/assets/pathum.webp',
 }
 
 export const stats = [

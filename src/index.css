@@ -886,25 +886,31 @@ button {
   }
 }
 
+/* The cut-out is a tall standing figure (578x1371), so it is sized by HEIGHT —
+   driving it off width would overflow the section vertically. */
 .hero__photo-wrap {
   position: relative;
   z-index: 3;
-  width: min(100%, 430px);
+  height: min(74vh, 620px);
+  max-width: 100%;
   will-change: transform;
 }
 
 .hero__photo {
-  width: 100%;
-  height: auto;
+  height: 100%;
+  width: auto;
+  max-width: 100%;
+  object-fit: contain;
   filter: drop-shadow(0 34px 60px rgba(0, 0, 0, 0.75))
     drop-shadow(0 0 40px rgba(139, 92, 246, 0.22));
   animation: bob 6.5s ease-in-out infinite;
-  /* Dissolves the hard bottom edge of the cut-out into the page. */
-  mask-image: linear-gradient(to bottom, #000 78%, rgba(0, 0, 0, 0.35) 93%, transparent 100%);
+  /* The figure runs to the bottom edge of the source frame, so only the last
+     sliver is faded — just enough to kill the hard cut at his legs. */
+  mask-image: linear-gradient(to bottom, #000 90%, rgba(0, 0, 0, 0.45) 97%, transparent 100%);
   -webkit-mask-image: linear-gradient(
     to bottom,
-    #000 78%,
-    rgba(0, 0, 0, 0.35) 93%,
+    #000 90%,
+    rgba(0, 0, 0, 0.45) 97%,
     transparent 100%
   );
 }
@@ -1125,7 +1131,7 @@ button {
     min-height: 420px;
   }
   .hero__photo-wrap {
-    width: min(78%, 330px);
+    height: min(48vh, 400px);
   }
   .orbit {
     --orbit-r: 196px;

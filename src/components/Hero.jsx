@@ -268,8 +268,8 @@ export default function Hero() {
               className="hero__photo"
               src={profile.photo}
               alt={`${profile.name}, backend software engineer`}
-              width={860}
-              height={1146}
+              width={578}
+              height={1371}
             />
             <div className="hero__scan" />
           </motion.div>

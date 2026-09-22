@@ -18,7 +18,7 @@ already taken on this machine).
 ## Where things live
 
 ```
-public/assets/pathum.png     the cut-out portrait used in the hero
+public/assets/pathum.webp    the cut-out portrait used in the hero
 src/data/content.js          ALL copy: profile, skills, jobs, projects, education, refs
 src/index.css                design tokens + every @keyframes
 src/components/              one file per section
@@ -61,8 +61,17 @@ Everything is disabled under `prefers-reduced-motion: reduce`.
 Drop files into `public/assets/` and reference them as `/assets/<name>`. The hero
 photo path is `profile.photo` in `src/data/content.js`.
 
-The portrait should be a **transparent PNG cut-out** — the hero applies a bottom
-fade mask and a drop-shadow that both assume there's no background box.
+The portrait should be a **transparent cut-out** — the hero applies a bottom fade
+mask and a drop-shadow that both assume there's no background box.
+
+The shipped portrait was auto-cropped to its alpha bounding box (1086×1448 →
+578×1371; roughly half the original frame was empty padding, which made the
+figure render at about half the size it should) and re-encoded to WebP,
+985 KB → 86 KB. If you send a replacement, crop it to the figure the same way,
+then update `width`/`height` on the `<img>` in `src/components/Hero.jsx` to match.
+
+Because the cut-out is a tall standing figure, `.hero__photo-wrap` is sized by
+**height**, not width — driving it off width overflows the section vertically.
 
 ## Notes on the CV content
 
